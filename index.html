@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR 3D Model Viewer</title>
+  <!-- AR.js and Three.js CDN -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <!-- Link to External CSS (Optional) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Marker (QR Code/Barcode) -->
+    <a-marker preset="custom" type="barcode" value="5">
+      <!-- 3D Model -->
+      <a-entity
+        id="model"
+        gltf-model="#model-gltf"
+        scale="0.5 0.5 0.5"
+        position="0 0 0"
+        rotation="0 180 0"
+        gesture-handler
+      ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <!-- Model Asset -->
+  <a-assets>
+    <a-asset-item id="model-gltf" src="assets/models/model.gltf"></a-asset-item>
+  </a-assets>
+
+  <!-- Gesture Handler Script -->
+  <script src="assets/js/gesture-handler.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR 3D Model Viewer</title>
+  <!-- AR.js and Three.js CDN -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <!-- Link to External CSS (Optional) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene embedded arjs>
+    <!-- Marker (QR Code/Barcode) -->
+    <a-marker preset="custom" type="barcode" value="5">
+      <!-- 3D Model -->
+      <a-entity
+        id="model"
+        gltf-model="#model-gltf"
+        scale="0.5 0.5 0.5"
+        position="0 0 0"
+        rotation="0 180 0"
+        gesture-handler
+      ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+
+  <!-- Model Asset -->
+  <a-assets>
+    <a-asset-item id="model-gltf" src="assets/models/iceboxv2.gltf"></a-asset-item>
+  </a-assets>
+
+  <!-- Gesture Handler Script -->
+  <script src="assets/js/gesture-handler.js"></script>
+</body>
+</html>
